@@ -116,3 +116,15 @@ jobs:
           message: |
             Hello world ! :wave:
 ```
+
+# Data Version Control - DVC
+
+## Creating a DVC pipeline
+
+`dvc stage add -n print -d print.sh -o pages ./print.sh`
+
+`dvc stage add -n scan -d scan.sh -d pages -o signed.pdf ./scan.sh`
+
+`dvc dag`
+
+`dvc dag --outs`
